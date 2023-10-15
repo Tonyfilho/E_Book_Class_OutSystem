@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BodyComponent } from './body/body.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -13,7 +14,11 @@ import { BodyComponent } from './body/body.component';
     BodyComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
+  ],
+  exports: [
+    BodyComponent
   ]
 })
 export class StartComponentsModule { }
