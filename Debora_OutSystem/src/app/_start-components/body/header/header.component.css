@@ -6,14 +6,23 @@
 
 
 a.nav-link {
-
   font-family: Arial, sans-serif;
   color: #ffffff;
-
+  cursor: pointer;
 }
-a.nav-link.active {
 
+a.nav-link:hover {
+  color: #f0b686 !important;
+}
+
+
+
+a.nav-link.active {
   font-family: Arial, sans-serif;
   color: #ffffff;
+  cursor: pointer;
+}
 
+a.nav-link.active:hover {
+  color: #f0b686 !important;
 }
