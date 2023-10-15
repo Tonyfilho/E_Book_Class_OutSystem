@@ -4,6 +4,7 @@ import { HeaderComponent } from './body/header/header.component';
 import { FooterComponent } from './body/footer/footer.component';
 import { BodyComponent } from './body/body.component';
 import { RouterModule } from '@angular/router';
+import { AuthenticationComponent } from './authentication/authentication.component';
 
 
 
@@ -11,7 +12,8 @@ import { RouterModule } from '@angular/router';
   declarations: [
     HeaderComponent,
     FooterComponent,
-    BodyComponent
+    BodyComponent,
+    AuthenticationComponent
   ],
   imports: [
     CommonModule,
