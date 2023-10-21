@@ -1,10 +1,13 @@
+
+
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: #ffffff;
   display: flex;
   flex-direction: column;
-  min-height: 97vh;
+  min-height: 95vh;
   background-image: url('./../assets/Background/01_OutSystem.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -12,6 +15,7 @@ body {
 }
 
 .bg-body-tertiary {
+  max-height: 5vh;
   margin: 0;
   background: linear-gradient(68.15deg, #09031f 14.62%, #f10e0e 85.61%);
 
