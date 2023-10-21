@@ -1,4 +1,4 @@
-import { AuthenticationComponent } from './authentication/authentication.component';
+import { AuthenticationComponent } from '../authentication/authentication.component';
 import { Injectable } from '@angular/core';
 
 @Injectable({
