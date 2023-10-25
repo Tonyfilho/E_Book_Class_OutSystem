@@ -1,0 +1,25 @@
+[debug] [2023-10-25T08:14:15.316Z] ----------------------------------------------------------------------
+[debug] [2023-10-25T08:14:15.318Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-10-25T08:14:15.318Z] CLI Version:   12.7.0
+[debug] [2023-10-25T08:14:15.318Z] Platform:      win32
+[debug] [2023-10-25T08:14:15.318Z] Node Version:  v16.18.1
+[debug] [2023-10-25T08:14:15.319Z] Time:          Wed Oct 25 2023 09:14:15 GMT+0100 (Western European Summer Time)
+[debug] [2023-10-25T08:14:15.319Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-10-25T08:14:15.324Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-10-25T08:14:15.324Z] > authorizing via signed-in user (oficinadosdrones@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\_DEV\_Angular\E_Book_Class_OutSystem\Debora_OutSystem
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
