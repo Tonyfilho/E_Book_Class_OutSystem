@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "e-book-outsystem-966bf"
+  },
+  "targets": {
+    "e-book-outsystem-966bf": {
+      "hosting": {
+        "Debora_OutSystem": [
+          "e-book-outsystem-966bf"
+        ]
+      }
+    }
   }
 }
