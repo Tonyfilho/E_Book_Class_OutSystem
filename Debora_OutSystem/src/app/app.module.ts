@@ -80,3 +80,7 @@ import { StartComponentsModule } from './_start-pages/start-components/start-com
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+function provideAuth(arg0: () => any): any[] | import("@angular/core").Type<any> | import("@angular/core").ModuleWithProviders<{}> {
+  throw new Error('Function not implemented.');
+}
+

@@ -1,11 +1,17 @@
 
 
-.container-from mat-form-field + mat-form-field {
-  margin-left: 8px;
+.container-from {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: center;
+  align-items: flex-end;
+  background-image: url("./../../../assets/Background/login_Background.png");
 }
 
 .form-button-row {
   display: table-cell;
   max-width: 600px;
 }
+
 
