@@ -1,4 +1,4 @@
-<header>
+<!-- <header>
   <div class="main">
     <div class="main-left">
       <ul class="nav ">
@@ -27,5 +27,17 @@
       </ul>
     </div>
   </div>
+</header> -->
+<header>
+  <mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4">
+    <mat-tab label="OutSystems"> OutSystems </mat-tab>
+    <mat-tab label="DataBases"> DataBases </mat-tab>
+    <mat-tab label="About"> About </mat-tab>
+    <img
+      [src]="this.localImg | async"
+      class="course-thumbnail mat-elevation-z8"
+    />
+  </mat-tab-group>
+
 </header>
 
