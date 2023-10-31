@@ -34,6 +34,7 @@ import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AuthenticationModule } from './_start-pages/authentication/authentication.module';
 import { StartComponentsModule } from './_start-pages/start-components/start-components.module';
+import { _ShareMaterialModule } from './_start-pages/_share/_share-material.module';
 
 
 @NgModule({
@@ -68,7 +69,7 @@ import { StartComponentsModule } from './_start-pages/start-components/start-com
     ReactiveFormsModule,
     AuthenticationModule,
     StartComponentsModule,
-
+    _ShareMaterialModule,
     OutsystemModule,
     AngularFireAuthModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
