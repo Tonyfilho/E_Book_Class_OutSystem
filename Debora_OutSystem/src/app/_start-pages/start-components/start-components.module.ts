@@ -23,7 +23,9 @@ import { MainComponent } from './body/main/main.component';
     RouterModule
   ],
   exports: [
-    BodyComponent
+    BodyComponent,
+    HeaderComponent,
+    FooterComponent
   ]
 })
 export class StartComponentsModule { }
