@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { OutsystemComponent } from './outsystem.component';
-import { _ShareMaterialModule } from '../_start-pages/_share/_share-material.module';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+
 
 
 
@@ -11,7 +14,10 @@ import { _ShareMaterialModule } from '../_start-pages/_share/_share-material.mod
   ],
   imports: [
     CommonModule,
-    _ShareMaterialModule
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule
+
   ]
 })
 export class OutsystemModule { }
