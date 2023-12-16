@@ -1,13 +1,20 @@
 import { Component } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { AuthenticationService } from 'src/app/_start-pages/authentication/auth.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
-  
+
 })
 export class HeaderComponent {
-  localImg: Observable<string> = new Observable(d => d.next(`./../../../../assets/Images/login/no_avatar.png `));
+  localAvatar$!: BehaviorSubject<any>;
+  isAutentication$!: BehaviorSubject<boolean>;
+
+  constructor(private authService: AuthenticationService) {
+   this.localAvatar$ = this.authService.avatarUser$;
+   
+  }
 
 }

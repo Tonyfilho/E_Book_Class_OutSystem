@@ -1,40 +1,13 @@
-<!-- <header>
-  <div class="main">
-    <div class="main-left">
-      <ul class="nav ">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page">Active</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-      </ul>
-    </div>
-    <div class="main-right">
-      <ul class="nav justify-content-end">
-        <li class="nav-item">
-          <a
-            class="nav-link active"
-            aria-current="page"
-            routerLink="/authentication"
-            >Authentication</a
-          >
-        </li>
-        <img
-          [src]="this.localImg | async"
-          class="course-thumbnail mat-elevation-z8"
-        />
-      </ul>
-    </div>
-  </div>
-</header> -->
+
 <header>
   <mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4">
     <mat-tab label="OutSystems"> OutSystems </mat-tab>
     <mat-tab label="DataBases"> DataBases </mat-tab>
     <mat-tab label="About"> About </mat-tab>
+    <mat-tab label="Authentication"> Authentication </mat-tab>
+
     <img
-      [src]="this.localImg | async"
+      [src]="this.localAvatar$ | async"
       class="course-thumbnail mat-elevation-z8"
     />
   </mat-tab-group>
