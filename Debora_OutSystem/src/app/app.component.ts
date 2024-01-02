@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AuthenticationService } from './_start-pages/authentication/auth.service';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-//  title = 'Debora_OutSystem';
+  localAvatar$!: BehaviorSubject<any>;
+
+
+  constructor(private authService: AuthenticationService) {
+   this.localAvatar$ = this.authService.avatarUser$;
+
+  }
 }
