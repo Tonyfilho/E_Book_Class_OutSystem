@@ -2,9 +2,11 @@ export class UserTokenModel {
 
   email: string;
   userId: string;
-  private _token: string;
   _tokenExpirationDate: Date;
+  private _token: string;
+  private _isLogin: boolean;
   avatar?: string;
+
 
 
 
@@ -16,16 +18,23 @@ export class UserTokenModel {
     this._token = _token;
     this._tokenExpirationDate = _tokenExpirationDate;
     this.avatar = avatar;
+    this._isLogin = false;
 
   }
 
   get token() {
     if (!this._tokenExpirationDate || new Date() > this._tokenExpirationDate) {
-      return null;
-    }
 
-    return this._token;
-  }
+      return null;
+
+    }
+    this._isLogin = true;
+    return this._token ;
+  };
+
+  get isLogin () {
+    return this._isLogin;
+  };
 
 
 

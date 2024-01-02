@@ -1,16 +1,21 @@
-
 <header>
-  <mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4">
-    <mat-tab label="OutSystems"> OutSystems </mat-tab>
-    <mat-tab label="DataBases"> DataBases </mat-tab>
-    <mat-tab label="About"> About </mat-tab>
+  <!-- <mat-tab-group
+    mat-stretch-tabs
+    class="example-stretched-tabs mat-elevation-z4"
+  >
+    <div class="login" *ngIf="isAutentication$ | async; else isNotLogin">
+      <mat-tab label="OutSystems"> OutSystems </mat-tab>
+      <mat-tab label="DataBases"> DataBases </mat-tab>
+    </div>
+    <ng-template #isNotLogin>
+      <mat-tab label="About"> About </mat-tab>
+    </ng-template>
+  </mat-tab-group> -->
 
+  <mat-tab-group fitInkBarToContent>
+    <mat-tab label="OutSystems" [disabled]="!isAutentication$" ></mat-tab>
+    <mat-tab label="DataBases" [disabled]="!isAutentication$"></mat-tab>
 
-    <!-- <img
-      [src]="this.localAvatar$ | async"
-      class="course-thumbnail mat-elevation-z8"
-    /> -->
+    <mat-tab label="About"></mat-tab>
   </mat-tab-group>
-
 </header>
-

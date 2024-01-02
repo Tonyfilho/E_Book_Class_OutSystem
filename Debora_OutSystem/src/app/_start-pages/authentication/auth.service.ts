@@ -14,7 +14,7 @@ export class AuthenticationService  extends UnSubscription {
 
   private tokenExpirationTimer: any;
   userLogin$!: BehaviorSubject<UserTokenModel | null>;
-  avatarUser$: BehaviorSubject<string> = new BehaviorSubject('./../../../assets/Images/login/no_avatar.png')
+  avatarUser$: BehaviorSubject<string> = new BehaviorSubject('./../../../assets/Images/login/no_avatar.png');
   //private auth: AngularFireAuth
   constructor(private authFireAuth: AngularFireAuthModule) {
     super();
