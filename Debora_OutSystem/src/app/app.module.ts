@@ -32,9 +32,10 @@ import { environment } from '../environments/environment';
 
 
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { getAuth } from 'firebase/auth';
+import { ShareModule } from './_start-pages/_share/_share.module';
 import { AuthenticationModule } from './_start-pages/authentication/authentication.module';
 import { StartComponentsModule } from './_start-pages/start-components/start-components.module';
-import { ShareModule } from './_start-pages/_share/_share.module';
 
 
 
@@ -75,7 +76,7 @@ import { ShareModule } from './_start-pages/_share/_share.module';
     OutsystemModule,
     AngularFireAuthModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-   // provideAuth(() => getAuth()),
+    //provideAuth(() => getAuth()),
 
 
   ],
