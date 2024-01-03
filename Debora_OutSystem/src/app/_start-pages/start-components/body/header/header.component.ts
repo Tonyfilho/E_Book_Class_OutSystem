@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BehaviorSubject, Observable, tap } from 'rxjs';
+import { BehaviorSubject, tap } from 'rxjs';
 import { AuthenticationService } from 'src/app/_start-pages/authentication/auth.service';
 
 @Component({
@@ -14,7 +14,7 @@ export class HeaderComponent {
 
   constructor(private authService: AuthenticationService) {
    this.localAvatar$ = this.authService.avatarUser$;
-   this.authService.userLogin$?.pipe(tap(data =>  {this.isAutentication$.next(data?.isLogin as boolean), console.log("login ", data?.isLogin)})).subscribe();
+   this.authService.userLogin$?.pipe(tap(data =>  {this.isAutentication$.next(data?.isLogin as boolean), console.log("login ", data?.isLogin)}));
 
   }
 

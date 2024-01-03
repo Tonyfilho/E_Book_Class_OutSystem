@@ -1,0 +1,26 @@
+<!-- /** No Html colocaremos o que for necessario no nosso caso card * / -->
+<!-- Note: You must put the Boolean condition in the NgStyle, if NOT doesn working<-->
+<mat-card
+  class="example-card"
+  [ngStyle]="{
+    background:
+      data.kind === 'primary'
+        ? 'linear-gradient(68.15deg, #81a5ec 14.62%, #436892 85.61%)'
+        : 'linear-gradient(68.15deg, #ec8d81 14.62%, #eb0738 85.61%)'
+  }"
+>
+  <mat-card-header>
+    <mat-card-title>{{ data.statusText}} </mat-card-title>
+  </mat-card-header>
+
+  <h1 mat-dialog-title>{{ data.message }}</h1>
+  <div mat-dialog-content>
+    {{ data.statusText }}
+  </div>
+  <div mat-dialog-actions class="mat-button">
+    <button mat-raised-button color="{{ data.kind }}" mat-dialog-close>
+      Close
+    </button>
+  </div>
+</mat-card>
+<!--  '{{ data.background }}'-->
