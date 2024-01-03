@@ -1,21 +1,22 @@
 <header>
-  <!-- <mat-tab-group
-    mat-stretch-tabs
-    class="example-stretched-tabs mat-elevation-z4"
-  >
-    <div class="login" *ngIf="isAutentication$ | async; else isNotLogin">
-      <mat-tab label="OutSystems"> OutSystems </mat-tab>
-      <mat-tab label="DataBases"> DataBases </mat-tab>
-    </div>
-    <ng-template #isNotLogin>
-      <mat-tab label="About"> About </mat-tab>
-    </ng-template>
-  </mat-tab-group> -->
-
-  <mat-tab-group fitInkBarToContent color="aliceblue">
+   <!-- <mat-tab-group fitInkBarToContent color="aliceblue">
     <mat-tab label="OutSystems" [disabled]="!isAutentication$" color="aliceblue"></mat-tab>
     <mat-tab label="DataBases" [disabled]="!isAutentication$" color="aliceblue"></mat-tab>
 
     <mat-tab label="About" color="aliceblue"></mat-tab>
+  </mat-tab-group> -->
+  <!-- <mat-tab-group fitInkBarToContent color="aliceblue">
+    <mat-tab label="OutSystems" [disabled]="!isAutentication$" color="aliceblue" ngClass="'custom-tab-label'"></mat-tab>
+    <mat-tab label="DataBases" [disabled]="!isAutentication$" color="aliceblue" ngClass="'custom-tab-label'"></mat-tab>
+    <mat-tab label="About" color="aliceblue" [ngClass]="'custom-tab-label'"></mat-tab>
+  </mat-tab-group> -->
+
+  <!-- -------------Obs: O Css do cor da fonte esta sendo aplicado no CSS Pai de todos -------------->
+  <mat-tab-group fitInkBarToContent>
+    <mat-tab label="OutSystems" [disabled]="!isAutentication$"  class="custom-tab-label" routerLink="/authentication"></mat-tab>
+    <mat-tab label="DataBases" [disabled]="!isAutentication$"  class="custom-tab-label"></mat-tab>
+    <mat-tab label="About"  class="custom-tab-label"></mat-tab>
   </mat-tab-group>
+
+
 </header>

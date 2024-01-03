@@ -2,3 +2,11 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+/*Por ser biblioteca o Angular Material interfere no css só funciona aqui no CSS Pai de todos **/
+
+
+.mdc-tab__text-label {
+  color: aliceblue !important
+}
