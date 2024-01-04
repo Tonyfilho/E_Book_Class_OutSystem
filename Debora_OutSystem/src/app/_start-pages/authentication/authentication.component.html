@@ -3,45 +3,25 @@
   <div class="col"></div>
   <div class="col-12">
     <div class="container container-form">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image" [ngStyle]="{'background-image': 'url(' + (this.localAvatar$ |async ) + ')'}"></div>
+          <!-- <mat-card-title style="color: rgb(0, 0, 0);">Login Gmail</mat-card-title> -->
+          <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+        </mat-card-header>
+        <img mat-card-image src="./../../../assets/Background/login_Background.png" alt="img from  outSystem tecnologic">
+        <mat-card-content>
+          <p style="color: rgb(10, 10, 10); text-align: center;">
+           Pls go to Gmail Login
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button><span class="material-symbols-outlined">
+            
+            </span>Gmail</button>
 
-      <!-- <form class="form-gmail"
-        action=""
-        [formGroup]="authenticationForm"
-        (ngSubmit)="onSubmit()"
-        *ngIf="!isLodingSpinner"
-      >
-        <p>
-          <mat-form-field appearance="outline">
-            <mat-label>Enter your Gmail</mat-label>
-            <input
-              matInput
-              placeholder="...@gmail.com"
-              required
-              formControlName="email"
-            />
-
-          </mat-form-field>
-        </p>
-        <p>
-          <mat-form-field appearance="outline">
-            <mat-label>Enter Password</mat-label>
-            <input
-              matInput
-              placeholder="Min 8 Caracter"
-              formControlName="password"
-            />
-          </mat-form-field>
-        </p>
-
-        <div class="form-button-row">
-          <button mat-raised-button color="warn" type="button">
-            Cancel LoginIn
-          </button>
-          <button mat-raised-button color="primary" type="submit">
-            LoginIn
-          </button>
-        </div>
-      </form> -->
+        </mat-card-actions>
+      </mat-card>
     </div>
   </div>
   <div class="col"></div>

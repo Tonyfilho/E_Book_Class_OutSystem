@@ -1,7 +1,5 @@
 .first {
   margin-top: 5%;
-  // width: 100%;
-
 }
 .container-form {
    width: 60%;
@@ -11,17 +9,13 @@
   align-content: space-around;
   justify-content: center;
   align-items: flex-end;
-  background-image: url("./../../../assets/Background/login_Background.png");
+
+}
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+ /*Image esta vindo no NgStyle no component Html*/
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
-.form-gmail {
-  color: aliceblue;
-}
-.form-button-row {
-  display: table-cell;
-  max-width: 600px;
-}
-
-
