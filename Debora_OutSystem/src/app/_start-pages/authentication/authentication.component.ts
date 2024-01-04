@@ -22,12 +22,12 @@ export class AuthenticationComponent {
 
 
 
-  constructor(private fb: FormBuilder, private router: Router, private auth: AuthenticationService) {
+  constructor(private fb: FormBuilder, private router: Router, private authentication: AuthenticationService) {
     // this.authenticationForm = this.fb.group({
     //   email: ['', [Validators.required, Validators.email]],
     //   password: ['', [Validators.required, Validators.minLength(8)]],
     // });
-    this.localAvatar$ = this.auth.avatarUser$;
+    this.localAvatar$ = this.authentication.avatarUser$;
   }
 
   showTheError(field: FormControl) {
@@ -45,7 +45,9 @@ export class AuthenticationComponent {
   }
 
 
-  onSubmit() { }
+  goToGmail() {
+    this.authentication.handleGoogleSigIn();
+  }
 
 
 

@@ -8,6 +8,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { RouterModule, Routes } from '@angular/router';
+import {MatIconModule} from '@angular/material/icon';
 
 
 
@@ -24,6 +25,7 @@ const  ROUTES_AUTH: Routes = [
     MatInputModule,
     MatButtonModule,
     MatCardModule,
+    MatIconModule,
     ReactiveFormsModule,
     RouterModule.forChild(ROUTES_AUTH),
   ]
