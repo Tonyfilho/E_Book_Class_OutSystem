@@ -1,24 +1,49 @@
-<div class="container-form">
-  <form action="" [formGroup]="authenticationForm" (ngSubmit)="onSubmit()" *ngIf="!isLodingSpinner" >
-    <p>
-      <mat-form-field appearance="outline">
-        <mat-label>Enter your Gmail</mat-label>
-        <input matInput placeholder="...@gmail.com" required formControlName="email">
-        <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
-      </mat-form-field>
-    </p>
-    <p>
-      <mat-form-field appearance="outline">
-        <mat-label>Enter Password</mat-label>
-        <input matInput placeholder="Min 8 Caracter" formControlName="password">
-      </mat-form-field>
-    </p>
+<!-- <div class="row"></div> -->
+<div class="row first">
+  <div class="col"></div>
+  <div class="col-12">
+    <div class="container container-form">
 
-    <div class="form-button-row">
-      <button mat-raised-button color="warn" type="button">Cancel LoginIn</button>
-      <button mat-raised-button color="primary" type="submit">LoginIn</button>
+      <!-- <form class="form-gmail"
+        action=""
+        [formGroup]="authenticationForm"
+        (ngSubmit)="onSubmit()"
+        *ngIf="!isLodingSpinner"
+      >
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Enter your Gmail</mat-label>
+            <input
+              matInput
+              placeholder="...@gmail.com"
+              required
+              formControlName="email"
+            />
+
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Enter Password</mat-label>
+            <input
+              matInput
+              placeholder="Min 8 Caracter"
+              formControlName="password"
+            />
+          </mat-form-field>
+        </p>
+
+        <div class="form-button-row">
+          <button mat-raised-button color="warn" type="button">
+            Cancel LoginIn
+          </button>
+          <button mat-raised-button color="primary" type="submit">
+            LoginIn
+          </button>
+        </div>
+      </form> -->
     </div>
-
-
-  </form>
+  </div>
+  <div class="col"></div>
 </div>
+<!-- <div class="row"></div> -->

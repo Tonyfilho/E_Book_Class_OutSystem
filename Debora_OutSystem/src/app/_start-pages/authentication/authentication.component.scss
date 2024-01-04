@@ -1,14 +1,24 @@
+.first {
+  margin-top: 5%;
+  // width: 100%;
 
-
-.container-from {
+}
+.container-form {
+   width: 60%;
+  height: 50vh;
   display: flex;
   flex-wrap: wrap;
   align-content: space-around;
   justify-content: center;
   align-items: flex-end;
   background-image: url("./../../../assets/Background/login_Background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
+.form-gmail {
+  color: aliceblue;
+}
 .form-button-row {
   display: table-cell;
   max-width: 600px;

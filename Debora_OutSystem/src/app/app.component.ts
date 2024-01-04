@@ -14,5 +14,7 @@ export class AppComponent {
   constructor(private authService: AuthenticationService) {
    this.localAvatar$ = this.authService.avatarUser$;
 
+   this.authService.autoLogin();
+
   }
 }

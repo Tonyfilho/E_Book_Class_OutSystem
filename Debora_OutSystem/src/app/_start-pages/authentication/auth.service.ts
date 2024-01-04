@@ -9,6 +9,7 @@ import { environment } from 'src/environments/environment';
 import { IModal } from '../_share/interfaces/i-modal';
 import { MatDialog } from '@angular/material/dialog';
 import { PopUpModalComponent } from '../_share/pop-up-modal/pop-up-modal.component';
+import { Router } from '@angular/router';
 
 
 /**precisa forçar a importação import { GoogleAuthProvider } from 'firebase/auth'; */
@@ -24,8 +25,9 @@ export class AuthenticationService extends UnSubscription {
   userLogin$!: BehaviorSubject<UserTokenModel | null>;
   avatarUser$: BehaviorSubject<string> = new BehaviorSubject('./../../../assets/Images/login/no_avatar.png');
   //private auth: AngularFireAuth
-  constructor(private app: FirebaseApp, public dialog: MatDialog) {
+  constructor(private app: FirebaseApp, public dialog: MatDialog, private router: Router) {
     super();
+    // this.autoLogin();
   }
 
   handleGoogleSigIn() {
@@ -33,6 +35,10 @@ export class AuthenticationService extends UnSubscription {
       this.avatarUser$.next(<string>res.user['photoURL']);
       const expirationTime = new Date(new Date().getTime() + +res._tokenResponse['expiresIn'] * 1000);
       const localUserToken = new UserTokenModel(res.user?.email, res.user.uid, res.user?.accessToken, expirationTime, res.user.providerData);
+      localStorage.setItem('userDate', JSON.stringify(localUserToken));
+      this.userLogin$.next(localUserToken);
+
+
 
     }), catchError((e) => {
       this.openPopUpDialogError({
@@ -59,6 +65,44 @@ export class AuthenticationService extends UnSubscription {
     this.dialog.open(PopUpModalComponent, {
       data: sucess
     });
+  }
+
+  autoLogin(): void {
+    const localUserStorage: { email: string; userId: string; _token: string; _tokenExpirationDate: string; avatar: string } | any = JSON.parse(localStorage.getItem('userData') as string);
+    if (!localUserStorage) {
+
+      return;
+    }
+    const localUserSignIn: UserTokenModel = new UserTokenModel(localUserStorage?.email, localUserStorage?.userId, localUserStorage?._token, new Date(localUserStorage?._tokenExpirationDate), localUserStorage.avatar);
+    if (localUserSignIn.token) {
+      /**Atualizando a hora do time para o Observable */
+      let expirationTime: number;
+      this.avatarUser$.next(localUserSignIn.avatar as string);
+      this.userLogin$.next(localUserSignIn);
+      expirationTime = new Date(localUserSignIn?._tokenExpirationDate).getTime() - new Date().getTime();
+      this.autoLogout(expirationTime);
+    }
+  }
+
+  private autoLogout(expirationDate: number) {
+    console.log("time:_ ", expirationDate);
+
+    this.tokenExpirationTimer = setTimeout(() => {
+      this.logOut();
+    }, expirationDate);
+  }
+
+
+  logOut() {
+
+    this.userLogin$.next(null);
+    localStorage.removeItem('userData');
+    this.router.navigate(['/body']);
+    this.avatarUser$.next('./../../../assets/Images/login/no_avatar.png');
+    if (this.tokenExpirationTimer) {
+      clearTimeout(this.tokenExpirationTimer);
+    }
+    this.tokenExpirationTimer = null;
   }
 
 
